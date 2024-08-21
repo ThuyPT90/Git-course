@@ -1,0 +1,2 @@
+git config --global user.email “phamthuthuy.ptit@gmail.com”
+git config --global user.name “K9 - <ThuyPT>”
