@@ -1,0 +1,19 @@
+1. Giải thích câu lệnh
+- git init: Khởi tạo git
+- git add <file_name>: thêm file nhất định lên staging area
+- git add .: thêm toàn bộ file có trong working lên staging
+- git commit -m “message”: Commit file từ staging lên repo
+
+2. Tưởng tượng
+a. Tạo 3 file: file1, file2, file3:
+-> Chưa ở vùng nào
+b. chạy lênh git init
+-> 3 file lên working 
+c. Chạy lệnh: git commit -m”init project”
+-> báo lỗi, 3 file vẫn ở working
+d. Chạy lệnh: git add file1
+-> file 1 lên staging
+e. Chạy lệnh: git commit -m”add file1”
+-> file 1 lên Repo, file2, file3 ở working
+f. Chạy lệnh: git add file
+-> Khong có gì thay đổi, file 1 ở repo, file2, file3 ở working
