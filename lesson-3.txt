@@ -1,0 +1,64 @@
+1. Giải thích các câu lệnh: git commit --amend, git commit --amend
+-m”<message>”, git restore --staged <file>, git reset HEAD~1.
+ Trả lời: 
+ git commit --amend: Changing a commit message
+ git commit --amend -m”<message>: incorrect, not change anything
+ git restore --staged <file>: comeback <file> from staging to working
+ git reset HEAD~1 : comback 1 commit from repo to working
+
+ Hãy tưởng tượng có 1 folder lesson-3 mới được tạo. Hãy liệt kê các file theo từng
+vùng, liệt kê các commit và message tương ứng sau khi thao tác một loạt các lệnh sau
+(sẽ rất tuyệt vời nếu bạn không chạy trên máy tính thật, mà bạn chạy trong đầu, sẽ giúp
+bạn hiểu về Git rõ ràng hơn):
+a. Tạo 3 file: file1, file2, file3
+ -> No have commit and message
+    3 files are not any area
+b. Chạy lệnh: git init
+ -> No have commit and message
+    3 files are working area
+c. Chạy lệnh: git commit -m”init project”
+ -> error, no have commit and message
+    3 files are working area
+d. Chạy lệnh: git add file1
+ -> no have commit and message
+    file2 and file3 are working area
+    file1 is staging area
+e. Chạy lệnh: git commit -m”add file”
+ -> have 1 commit, 1 message. 
+    file2 and file3 are working area
+    file1 is Repo area
+f. Chạy lệnh: git add .
+ -> have 1 commit, 1 message. 
+    file2 and file3 are staging area
+    file1 is Repo area
+g. Chạy lệnh: git restore --staged file2
+ -> have 1 commit, 1 message.
+    file2 is working area
+    file3 are staging area
+    file1 is Repo area
+h. Chạy lệnh: git commit -m”add all files”
+ -> have 2 commits, 2 message
+    file2 is working area
+    file1 and file3 are Repo area
+i. Chạy lệnh: git reset HEAD~1
+-> have 2 commits, 2 message
+   file2 and file3 are working area
+   file1 is Repo area
+
+3. Hãy tưởng tượng có 1 folder lesson-3-git mới được tạo ra. Hãy liệt kê các file theo
+từng vùng sau khi thao tác các lệnh sau:
+a. Chạy lệnh git init
+ --> no have any file
+b. Tạo file file1.txt, file2.txt, oops/file3.txt.
+ --> 3 file are working are
+c. Thêm file .gitignore, thêm vào 2 dòng:
+i. file1.txt
+ii. oops/
+--> file1 and file3 is in .git ignore.
+    file2 is working area
+d. Chạy lệnh: git add .
+--> file1 and file3 is in .git ignore.
+    file2 is staging area
+e. Chạy lệnh: git commit -m"init project"
+--> file1 and file3 is in .git ignore.
+    file2 is repo area
