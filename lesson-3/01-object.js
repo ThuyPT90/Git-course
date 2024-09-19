@@ -39,8 +39,10 @@ let product = {
 }
 console.log("4. Giá các sản phẩm là: ")
 for (let P in product) {
-    let p1 = product[P];
-    console.log(P + ": " + p1)
+    // let p1 = product[P];
+    //sử dụng template literal
+    console.log(`Sản phẩm ${P} có giá trị là ${product[P]}`);
+    // console.log(P + ": " + p1)
 }
 //5. Tạo một object settings để quản lý cài đặt của ứng dụng với các thuộc tính như volume, brightness. Thay đổi volume và in ra object mới.
 let settings = {
