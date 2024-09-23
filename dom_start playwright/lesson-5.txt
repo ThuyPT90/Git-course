@@ -1,0 +1,15 @@
+DOM
+1.Cấu trúc DOM cơ bản của một trang web bao gồm các thẻ gì?
+Trả lời: 
+    Thẻ mở
+    Nội dung của thẻ
+    Thẻ đóng
+2. Hãy mô tả cấu trúc html của 1 bảng (table)
+Trả lời:
+    - Thead = table heading
+        - tr = tablerow = 1 dòng
+            -th: title của mỗi column
+    - tbody    
+        - tr: 1 dòng
+            - td: data của mỗi cột trên dòng
+3. Push bài tập lên GitHub.
